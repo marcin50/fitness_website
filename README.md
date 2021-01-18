@@ -1,3 +1,3 @@
 # fitness_website
-90s-retro themed fitness website I made for an elective credit
+90s-retro themed fitness website I made for an elective credit. 
 work in progress...
