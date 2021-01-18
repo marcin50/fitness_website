@@ -1,0 +1,329 @@
+body {
+    /* initial setup is based on advice from forum advice and https://youtu.be/yfoY53QXEnI */
+    /* properties heavily modified to suit needs and styles of website */
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    /* this is used to keep the footer at the bottom of the page, advice taken from https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/  */
+    position: relative;
+    min-height: 100vh;
+}
+
+/* general link style */
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+a:active {
+    color: green;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+/* major components (header, footer, nav) */
+
+header {
+    background-image: url(../images/background.jpg);
+}
+
+footer {
+    background-color: #222;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.0em;
+    /* this is used to keep the footer at the bottom of the page advice taken from https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/  */
+    position: absolute;
+    bottom: 0;
+}
+
+/* navigation bar */
+
+nav {
+    background-image: linear-gradient(to top, black, rgba(255, 255, 255, 0.9));
+    color: black;
+    text-align: center;
+}
+
+nav ul {
+    /* margin 0 fixes white space above the navigation */
+    margin: 0 auto;
+    padding: 8px;
+    list-style: none;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 24px;
+    padding-right: 14px;
+    display: block;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* drop down navigation styles */
+
+/* box-shadow for drop down nav: instructons from https://www.w3schools.com/css/default.asp */
+
+.dropdown-items {
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(to bottom, black, white);
+    min-width: 140px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.dropdown-menu:hover .dropdown-items {
+    display: block;
+}
+
+/* this contains the main content/article of each page */
+
+.main-container {
+    width: 80%;
+    margin: auto;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 15px;
+    padding-bottom: 40px;
+}
+
+/* this resets the float, advice taken from https://youtu.be/yfoY53QXEnI */
+
+.clear-float {
+    clear: both;
+}
+
+.scrollable {
+    overflow-x: auto;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+/* used to divide 3 large blocks on exercise page for navigation */
+
+/* this section was borrowed and tweaked from https://youtu.be/yfoY53QXEnI */
+
+.block {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    float: left;
+    width: 33.3%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.block:hover {
+    filter: saturate(7);
+    transition: 0.4s;
+}
+
+#push-block {
+    background-image: url(../exercises/images/bench_press.jpg);
+}
+
+#pull-block {
+    background-image: url(../exercises/images/deadlift.jpg);
+}
+
+#leg-block {
+    background-image: url(../exercises/images/squat.jpg);
+}
+
+/* the same goal table on each exercise page */
+
+#goal-table {
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* technique to center an image borrowed from https://www.w3schools.com/css/css_align.asp */
+
+#banner-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#banner-logo:hover {
+    filter: invert(100%);
+    transition: 0.3s;
+}
+
+/* forms and contact form styling */
+
+.forms {
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+}
+
+.form-section {
+    display: block;
+    padding: 2px;
+    width: 100%;
+}
+
+.input-field {
+    border: 1px #ccc solid;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    resize: none;
+}
+
+.input-field:focus {
+    background-image: none;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.4);
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-field:hover {
+    border: 1px #444 solid;
+}
+
+/* misc. items */
+
+.labels {
+    line-height: 2em;
+}
+
+.buttons {
+    background-image: linear-gradient(to top, darkgray, white);
+    border: 1px #ccc solid;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.buttons:hover {
+    border: 1px #444 solid;
+}
+
+/* exercise cards/partitions styling */
+
+.workout-card {
+    border-top: 1px #ccc solid;
+    float: left;
+    width: 100%;
+}
+
+.workout-card .card-text {
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* max-width used to keep image size reasonable and responsive with auto height */
+
+.workout-card img {
+    float: left;
+    border: 1px #ccc solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+    width: 30%;
+}
+
+/* creates cards for each app to seperate them  */
+
+.app-card {
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+    /* width: fit-content; */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: auto;
+}
+
+#calculate {
+    margin-top: 14px;
+}
+
+#alert-msg {
+    display: none;
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+}
+
+#result {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+/* this section makes the website responsive when using smaller viewports.
+The idea to use @media is borrowed from at:https://www.youtube.com/watch?v=yfoY53QXEnI */
+
+@media(max-width:700px) {
+    .block {
+        float: none;
+        width: 100%;
+    }
+    nav li {
+        display: block;
+        width: 100%;
+    }
+    .workout-card .card-text {
+        float: none;
+        width: 100%;
+    }
+    .workout-card img {
+        float: none;
+        width: 100%;
+    }
+}

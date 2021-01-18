@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Marcin Lenart">
+    <title>Tools | SuperiorProdukt Fitness</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img id="banner-logo" src="images/banner_logo.png"
+                alt="Superior Produkt Fitness Logo (90s retro style)"></a>
+    </header>
+    <!-- navigation section -->
+    <nav>
+
+        <ul>
+            <li class="dropdown-menu"><a href="exercises.html">Exercises</a>
+                <div class="dropdown-items">
+                    <a href="exercises/push.html">Push</a>
+                    <a href="exercises/pull.html">Pull</a>
+                    <a href="exercises/legs.html">Legs</a>
+                </div>
+            </li>
+            <li><a href="cardio.html">Cardio</a></li>
+            <li><a href="apps.html">Performance Tools</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <h1 class="centered-text">Performance Tracking Tools
+        </h1>
+
+    <p>
+            <div class="app-card">
+              <h1 class="centered-text">One Rep Max Calculator</h1>
+              <h2>Calculate Your 1RM</h2>
+               <div class="input-lines">
+                 <p class="label">How much weight you lifted(lbs):</p>
+                 <input class="input-field" id="weightBox" type="text" required>
+                </div>
+                 
+                <div class="input-lines">
+                 <p class="label">How many reps performed:</p>
+                 <input class="input-field" id="repBox" type="text" required>
+                 <br>
+                 <div id="alert-msg" class="centered-text">Please finish filling out all of the fields correctly.</div>
+                 <button class="buttons" id="calculate" type="submit" onclick="calculateMax();">Submit</button>
+                 <p id="result" class="centered-text">Your Estimated One Rep Max</p>
+              </div>
+            </div>
+        </p>
+    </div>
+    <footer>
+        <p>&copy;2020 Lenart. Please consult a healthcare professional before attempting any exercises found on this
+            website. If you use
+            any
+            exercises or information on this website, you are doing so at your own risk.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
