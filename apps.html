@@ -35,51 +35,62 @@
         <h1 class="centered-text">Performance Tracking Tools
         </h1>
 
-            <div class="app-card">
-              <h1 class="centered-text">One Rep Max Calculator</h1>
-              <h2>Calculate Your 1RM</h2>
-               <div class="input-lines">
-                 <p class="label">How much weight you lifted(lbs):</p>
-                 <input class="input-field" id="weightBox" type="text" required>
+        <div class="app-card">
+            <h1 class="centered-text">One Rep Max Calculator</h1>
+            <h2>Calculate Your 1RM</h2>
+            <div class="input-lines">
+                <p class="label">How much weight you lifted(lbs):</p>
+                <input class="input-field" id="weightBox" type="text" required>
+            </div>
+
+            <div class="input-lines">
+                <p class="label">How many reps performed:</p>
+                <input class="input-field" id="repBox" type="text" required>
+                <br>
+                <div id="alert-msg" class="centered-text">Please finish filling out all of the fields correctly.</div>
+                <button class="buttons" id="calculate" type="submit" onclick="calculateMax();">Submit</button>
+                <p id="result" class="centered-text">Your Estimated One Rep Max</p>
+            </div>
+        </div>
+        <br>
+        <!-- Pace-tracker app section -->
+        <div class="app-card">
+            <h1 class="centered-text">Running Pace Tracker</h1>
+
+            <form class="forms">
+                <div class="app-section">
+                    <label class="labels" for="pace">Input your pace:</label><br>
+                    <input class="time-field" type="text" id="pace-min" name="pace-min" placeholder="min">:
+                    <input class="time-field" type="text" id="pace-sec" name="pace-sec" placeholder="sec">
                 </div>
-                 
-                <div class="input-lines">
-                 <p class="label">How many reps performed:</p>
-                 <input class="input-field" id="repBox" type="text" required>
-                 <br>
-                 <div id="alert-msg" class="centered-text">Please finish filling out all of the fields correctly.</div>
-                 <button class="buttons" id="calculate" type="submit" onclick="calculateMax();">Submit</button>
-                 <p id="result" class="centered-text">Your Estimated One Rep Max</p>
-              </div>
-            </div>  
-   <br>
-   <!-- Pace-tracker app section -->
-    <div class="app-card">
-        <h1 class="centered-text">Running Pace Tracker</h1>
+                <div class="app-section">
+                    <label class="labels" for="date">Input Date:</label>
+                    <input class="date-field" type="date" id="date" name="date" placeholder="Date">
 
+                </div>
 
-           <form class="forms">
-            <div class="app-section">
-                <label class="labels" for="pace">Input your pace:</label><br>
-                <input class="time-field" type="text" id="pace-min" name="pace-min"  
-                    placeholder="min">:
-                    <input class="time-field" type="text" id="pace-sec" name="pace-sec"  
-                    placeholder="sec">
+                <br>
+                <input class="buttons" type="button" value="Add Time" onclick="addEntry();">
+                <input class="buttons" id="tester" type="button" value="Test Entry" onclick="addTestEntry();">
+                <br>
+                <div id="alert-msg2" class="centered-text">Please finish filling out all of the fields correctly.</div>
+            </form>
+
+            <div class="clear-float"></div>
+            <div id="plotter-space">
+                <canvas id="pace-plotter"></canvas>
             </div>
-            <div class="app-section">
-                <label class="labels" for="date">Input Date:</label>
-                <input class="time-field" type="date" id="date" name="date"  placeholder="Date">
-            
+            <div id="app-resize">
+                Display: <input class="date-field" type="date" id="date-min" name="date-min" placeholder="Date">
+                to: <input class="date-field" type="date" id="date-max" name="date-max" placeholder="Date">
+                <input class="buttons small" type="button" value="Resize" onclick="resizeRange();">
+                <input class="buttons small" type="button" value="Default View" onclick="drawDefaultChart();">
             </div>
-           
-  <br>
-            <input class="buttons" type="button"  value="Add Time" onclick="addEntry();">
-        </form>
-        <div class="clear-float"></div>
-<canvas id="pace-plotter"></canvas>
-<br>
-<input class="buttons" type="button"  value="Reset All" onclick="resetAll();">
-<ul id="data-list"></ul>
+            <div class="clear-float"></div>
+            <br>
+
+            <input class="buttons" type="button" value="Reset All" onclick="resetAll();">
+            <ul id="data-list"></ul>
 
         </div>
     </div>
