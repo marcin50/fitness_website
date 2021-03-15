@@ -233,8 +233,9 @@ class Entry {
         return `${this.pace} ${this.date}`
     }
 }
-
-//Chart section**************************************************************
+//##########################################################################
+//Chart section
+//##########################################################################
 function drawAxis() {
     //initialize cursor to bottom left of chart
     //bottom left of chart is: (blocks(5), blocks(40)) in terms of x,y plane

@@ -110,6 +110,8 @@ nav a {
     margin: auto;
     background-color: whitesmoke;
     padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 15px;
     padding-bottom: 40px;
 }
@@ -197,6 +199,7 @@ nav a {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     max-width: 700px;
+    margin: auto;
 }
 
 .form-section {
@@ -256,11 +259,10 @@ nav a {
     font-size: 16px;
     padding: 5px;
 }
-#tester{
-   
-   margin-left:10px;   
 
-   background-image: linear-gradient(to top, orange, white);
+#tester {
+    margin-left: 10px;
+    background-image: linear-gradient(to top, orange, white);
 }
 
 /* exercise cards/partitions styling */
@@ -336,7 +338,6 @@ nav a {
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
-    /* height: 300px; */
 }
 
 #app-resize {
@@ -350,6 +351,50 @@ nav a {
     width: 30px;
 }
 
+#qod-container {
+    position: relative;
+    color: black;
+    font-family: Garamond;
+    font-size: 20px;
+    border-bottom: 1px #ccc solid;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: 70%;
+}
+
+/* overlay feature borrowed from W3School https://www.w3schools.com/css/css3_images.asp */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .4s ease;
+    background-color: white;
+}
+
+#qod-container:hover .overlay {
+    opacity: 0.8;
+}
+
+#qod-container:active {
+    opacity: 0;
+}
+
+.text {
+    color: black;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
 
 /* this section makes the website responsive when using smaller viewports.
 The idea to use @media is borrowed from at:https://www.youtube.com/watch?v=yfoY53QXEnI */

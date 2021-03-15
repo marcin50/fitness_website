@@ -9,7 +9,9 @@
 </head>
 
 <body>
-
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"
+        nonce="AE9UvoaG"></script>
     <header>
         <a href="index.html">
             <img id="banner-logo" src="images/banner_logo.png"
@@ -32,23 +34,34 @@
     </nav>
 
     <div class="main-container">
+
+        <div id="qod-container">
+            <blockquote><p id="quote"></p><cite id="author"></cite></blockquote>
+            <div class="overlay">
+                <div class="text">Click for a new quote</div>
+            </div>
+        </div>
         <h1 class="centered-text">About
         </h1>
-        <p>This website is centered on my life-long interest of exercising and fitness. The intention of this website is
-            to
-            share my favorite exercises along with a few performance tracking tools. The exercises found on this website
-            consist of my most beneficial exercises from over the years. <span>Please feel free to <a
-                    href="contact.html">contact
-                    me</a> with your favorite
-                exercises at any time and I can add them to the list.</span> </p>
+        <p>This website is centered on my life-long interest of exercising and fitness. The intention of this
+            website is
+            to share my favorite exercises along with a few performance tracking tools and resources. The exercises
+            found on this website are the ones that I found most effective over the course of many years.
+            <span>Please
+                feel free to <a href="contact.html">contact
+                    me</a> or leave a comment with your favorite
+                exercise ideas or tools and I will add them to the list. </span>
+        </p>
     </div>
+    <div class="fb-comments" data-href="http://student.athabascau.ca/~marcinle/index.html" data-width=""
+        data-numposts=""></div>
     <footer>
         <p>&copy;2020 Lenart. Please consult a healthcare professional before attempting any exercises found on this
             website. If you use
             any
             exercises or information on this website, you are doing so at your own risk.</p>
     </footer>
-
+    <script src="js/quote.js"></script>
 </body>
 
 </html>

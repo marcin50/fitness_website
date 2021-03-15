@@ -6,6 +6,8 @@
     <meta name="author" content="Marcin Lenart">
     <title>Leg Exercises | SuperiorProdukt Fitness</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="../css/lightbox.css" rel="stylesheet" />
+    <script src="../js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -82,7 +84,9 @@
                     performed
                     with or without weights depending on your workout goal.</p>
             </div>
-            <img src="images/squat.jpg" alt="Man squatting with a heavy barbell on his back" height="300">
+            <a href="images/squat.jpg" data-lightbox="squat" data-title="Squats"><img class="hover-img"
+                src="images/squat.jpg" alt="Man squatting with a heavy barbell on his back" height="300"></a>
+
         </div>
         <div class="clear-float"></div>
     </div>
@@ -92,6 +96,20 @@
             any
             exercises or information on this website, you are doing so at your own risk.</p>
     </footer>
+        <!-- JQuery scripts and lightbox -->
+        <script src="../js/lightbox.js"></script>
+        <script>
+            $(document).ready(function () {
+    
+                $('.hover-img').hover(function () {
+                    $(this).css("border", "4px solid magenta");
+                },
+                    function () {
+                        $(this).css("border", "0px none");
+                    });
+    
+            });
+        </script>
 </body>
 
 </html>
