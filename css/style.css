@@ -112,6 +112,7 @@ nav a {
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
+    border: 2px magenta solid;
     border-radius: 15px;
     padding-bottom: 40px;
 }
@@ -187,7 +188,7 @@ nav a {
 
 #banner-logo:hover {
     filter: invert(100%);
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 /* forms and contact form styling */

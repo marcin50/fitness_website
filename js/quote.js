@@ -14,7 +14,6 @@ function loadQuote() {
       // set dom elements
       quoteField.textContent = '"' + quote.content + '"';
       authorField.textContent = quote.author;
-
     }
   }
   xhr.send();
